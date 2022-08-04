@@ -9,5 +9,4 @@ public class SanwoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SanwoApplication.class, args);
 	}
-
 }
