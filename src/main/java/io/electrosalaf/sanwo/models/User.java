@@ -6,19 +6,16 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
 @Entity(name = "User")
 @Table(
         name = "user",
         uniqueConstraints = {
-                @UniqueConstraint(
-                        name = "user_email_unique",
-                        columnNames = "email"
-                )
+                @UniqueConstraint(name = "user_email_unique", columnNames = "email")
         }
 )
+@Getter
+@Setter
+@NoArgsConstructor
 public class User {
 
     @Id
