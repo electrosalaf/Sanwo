@@ -6,9 +6,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@Entity(name = "User")
+@Entity(name = "app_user")
 @Table(
-        name = "user",
+        name = "app_user",
         uniqueConstraints = {
                 @UniqueConstraint(name = "user_email_unique", columnNames = "email")
         }
@@ -20,13 +20,13 @@ public class AppUser {
 
     @Id
     @SequenceGenerator(
-            name = "user_sequence",
-            sequenceName = "user_sequence",
+            name = "app_user_sequence",
+            sequenceName = "app_user_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "user_sequence"
+            generator = "app_user_sequence"
     )
     @Column(
           name = "id",
