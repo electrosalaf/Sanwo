@@ -1,12 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/sanwo_db
-    password: ${password}
-    username: ${username}
+    url: ${SANWO_DATABASE_URL}
+    username: ${SANWO_DATABASE_USERNAME}
+    password: ${SANWO_DATABASE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
